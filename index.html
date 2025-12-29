@@ -1,0 +1,292 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="window">
+        <div class="title-container">
+            <div class="titlebar">
+                <button class="titlebar-close" type="button" aria-label="Close"></button>
+                <span class="titlebar-title">Control Panel</span>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <section class="panel desktop-pattern">
+                <div class="panel-body desktop-body">
+                    <img src="img/desktop-pattern-1.jpg" class="pattern active" alt="">
+                    <img src="img/desktop-pattern-2.jpg" class="pattern" alt="">
+                </div>
+                <div class="panel-title">Desktop Pattern</div>
+            </section>
+
+            <section class="panel appletalk">
+
+                <div class="panel-body appletalk-body">
+                    <div class="appletalk-options stack">
+                        <div>AppleTalk</div>
+                        <div class="radio">
+                            <input type="radio" id="at-connected" name="at" checked />
+                            <label for="at-connected">Connected</label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" id="at-disconnected" name="at" />
+                            <label for="at-disconnected">Disconnected</label>
+                        </div>
+                    </div>
+
+                    <img class="appletalk-icon" src="img/appletalk.jpg" alt="" aria-hidden="true" />
+                </div>
+            </section>
+
+            </section>
+
+
+            <section class="panel speaker">
+
+                <div class="panel-body speaker-body">
+                    <div class="scale" aria-hidden="true">
+                        <div>7</div>
+                        <div>6</div>
+                        <div>5</div>
+                        <div>4</div>
+                        <div>3</div>
+                        <div>2</div>
+                        <div>1</div>
+                    </div>
+
+                    <input class="vslider" type="range" min="1" max="7" value="4" />
+                </div>
+                <div class="panel-title">Speaker Volume</div>
+            </section>
+
+            <section class="panel dblclick">
+
+                <div class="panel-body">
+                    <div class="dblclick-ui">
+                        <img class="dblclick-mouse" src="img/doubleclick.jpg" alt="" />
+
+                        <div class="dblclick-speed">
+                            <img class="dblclick-arrow" src="img/arrows-1.png" alt="" aria-hidden="true" />
+
+                            <div class="radio">
+                                <input type="radio" id="dblclick-1" name="dblclick" checked />
+                                <label for="dblclick-1"></label>
+                            </div>
+
+                            <img class="dblclick-arrow" src="img/arrows-2.png" alt="" aria-hidden="true" />
+
+                            <div class="radio">
+                                <input type="radio" id="dblclick-2" name="dblclick" />
+                                <label for="dblclick-2"></label>
+                            </div>
+
+                            <img class="dblclick-arrow" src="img/arrows-3.png" alt="" aria-hidden="true" />
+
+                            <div class="radio">
+                                <input type="radio" id="dblclick-3" name="dblclick" />
+                                <label for="dblclick-3"></label>
+                            </div>
+
+                            <div class="panel-title dblclick-label">Your Double-Click Speed</div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="panel mouse-tracking">
+                <div class="panel-title">Mouse Tracking</div>
+                <div class="panel-body mouse-body">
+                    <div class="tracking"><img src="img/tracking.jpg"></div>
+                    <div class="radio top">
+                        <input type="radio" id="mt-mouse" name="mt" checked />
+                        <label for="mt-mouse">Mouse</label>
+                    </div>
+
+                    <div class="radio top">
+                        <input type="radio" id="mt-tablet" name="mt" />
+                        <label for="mt-tablet">Tablet</label>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="panel rate">
+                <div class="panel-body">
+                    <div class="rate-ui">
+                        <div class="rate-left">
+                            <div class="rate-desc panel-title">Rate of Insertion<br />Point Blinking</div>
+                            <div class="rate-value">2.0</div>
+                        </div>
+
+                        <div class="rate-right">
+                            <img class="rate-icon" src="img/insertion.jpg" alt="" />
+
+                            <div class="rate-radios">
+                                <div class="radio">
+                                    <input type="radio" id="rate-slow" name="rate" />
+                                    <label for="rate-slow"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="rate-mid" name="rate" />
+                                    <label for="rate-mid"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="rate-fast" name="rate" checked />
+                                    <label for="rate-fast"></label>
+                                </div>
+                            </div>
+
+                            <div class="rate-scale">
+                                <span>Slow</span>
+                                <span>Fast</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel ram">
+                <div class="panel-body">
+                    <div class="ram-ui">
+                        <div class="ram-left">
+                            <div class="ram-label">
+                                <div>RAM</div>
+                                <div>Cache</div>
+                            </div>
+
+                            <div class="ram-stepper" role="group" aria-label="RAM Cache size">
+                                <select class="ram-select" id="ram-cache" aria-label="RAM Cache size">
+                                    <option value="64">64K</option>
+                                    <option value="128" selected>128K</option>
+                                    <option value="256">256K</option>
+                                    <option value="512">512K</option>
+                                    <option value="1024">1M</option>
+                                </select>
+
+                                <div class="ram-arrows" aria-hidden="true">
+                                    <button class="ram-arrow ram-up" type="button" aria-label="Increase">▲</button>
+                                    <button class="ram-arrow ram-down" type="button" aria-label="Decrease">▼</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ram-right" role="group" aria-label="RAM Cache enabled">
+                            <div class="radio top">
+                                <input type="radio" id="ram-on" name="ram-enabled" checked />
+                                <label for="ram-on">On</label>
+                            </div>
+
+                            <div class="radio top">
+                                <input type="radio" id="ram-off" name="ram-enabled" />
+                                <label for="ram-off">Off</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel keyboard">
+                <div class="panel-body">
+                    <div class="keyboard-ui">
+                        <!-- Left: Key Repeat Rate -->
+                        <div class="keyboard-group keyboard-repeat">
+                            <div class="keyboard-title">Key Repeat Rate</div>
+
+                            <div class="keyboard-radios">
+                                <div class="radio">
+                                    <input type="radio" id="krr-1" name="krr" />
+                                    <label for="krr-1"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="krr-2" name="krr" />
+                                    <label for="krr-2"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="krr-3" name="krr" />
+                                    <label for="krr-3"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="krr-4" name="krr" checked />
+                                    <label for="krr-4"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="krr-5" name="krr" />
+                                    <label for="krr-5"></label>
+                                </div>
+                            </div>
+
+                            <div class="keyboard-scale keyboard-scale-ends">
+                                <span>Slow</span>
+                                <span>Fast</span>
+                            </div>
+                        </div>
+
+                        <!-- Middle: Keyboard image -->
+                        <div class="keyboard-image-wrap" aria-hidden="true">
+                            <img class="keyboard-image" src="img/keyboard.jpg" alt="" />
+                        </div>
+
+                        <!-- Right: Delay until Repeat -->
+                        <div class="keyboard-group keyboard-delay">
+                            <div class="keyboard-title">Delay until Repeat</div>
+
+                            <div class="keyboard-radios keyboard-radios-delay">
+                                <div class="radio">
+                                    <input type="radio" id="kdelay-off" name="kdelay" />
+                                    <label for="kdelay-off"></label>
+                                </div>
+
+                                <div class="radio">
+                                    <input type="radio" id="kdelay-1" name="kdelay" />
+                                    <label for="kdelay-1"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="kdelay-2" name="kdelay" checked />
+                                    <label for="kdelay-2"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="kdelay-3" name="kdelay" />
+                                    <label for="kdelay-3"></label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="kdelay-4" name="kdelay" />
+                                    <label for="kdelay-4"></label>
+                                </div>
+                            </div>
+
+                            <div class="keyboard-scale keyboard-scale-3">
+                                <span>Off</span>
+                                <span>Long</span>
+                                <span>Short</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="licenses">
+        <p>The FontStruction “Geneva 9” (https://fontstruct.com/fontstructions/show/349277) by “Kelsey Higham” is
+            licensed under a Creative Commons Attribution license (http://creativecommons.org/licenses/by/3.0/).</p>
+    </section>
+
+</body>
+
+
+<script type="text/javascript" src="zugg-mode.js"></script>
+<script type="text/javascript" src="sound-handler.js"></script>
+<script type="text/javascript" src="click-handlers.js"></script>
+</html>
